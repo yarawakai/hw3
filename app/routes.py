@@ -1,4 +1,4 @@
-from app import myapp_obj
+from app import myobj
 from flask import render_template, flash, Flask, request, redirect, url_for
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField
@@ -11,7 +11,7 @@ class LoginForm(FlaskForm):
 name = 'Lisa'
 city_names = ['Paris', 'London', 'Rome', 'Tahiti']
 
-@myapp_obj.route("/", methods=['GET', 'POST'])
+@myobj.route("/", methods=['GET', 'POST'])
 def home():
 	form = LoginForm()
 	if request.method == "POST":

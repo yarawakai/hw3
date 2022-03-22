@@ -1,6 +1,6 @@
 from flask import Flask
 
-myapp_obj = Flask(__name__)
-myapp_obj.config['SECRET_KEY'] = 'ABC'
+myobj = Flask(__name__)
+myobj.config['SECRET_KEY'] = 'ABC'
 
 from app import routes
