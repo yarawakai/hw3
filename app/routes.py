@@ -1,6 +1,12 @@
 from app import myapp_obj
 from flask import render_template, flash, Flask, request, redirect, url_for
-from app.forms import LoginForm
+from flask_wtf import FlaskForm
+from wtforms import StringField, PasswordField, BooleanField, SubmitField
+from wtforms.validators import DataRequired
+ 
+class LoginForm(FlaskForm):
+    input = StringField('City Name', validators=[DataRequired()])
+    submit = SubmitField('Submit')
 
 name = 'Lisa'
 city_names = ['Paris', 'London', 'Rome', 'Tahiti']
